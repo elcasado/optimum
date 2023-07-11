@@ -20,7 +20,7 @@ function MultiPageForm() {
       // Send form data to backend using Axios
       await axios.post(`${BASE_API_URL}/api/form/submit-form`, { optimumid, password });
 
-        navigate('/')
+        navigate('/login')
     } catch (err) {
       console.error(err)
     }
