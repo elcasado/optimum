@@ -1,0 +1,29 @@
+{
+    "name": "multi-step-form",
+    "version": "1.0.0",
+    "description": "Multi-step form using MERN stack",
+    "main": "server/server.js",
+    "dependencies": {
+      "dotenv": "^15.0.0",
+      "express": "^4.18.1",
+      "mongoose": "^6.3.5",
+      "body-parser": "^1.19.1",
+      "cors": "^2.8.5",
+      "react": "^18.1.0",
+      "react-dom": "^18.1.0",
+      "react-router-dom": "^6.3.0"
+    },
+    "devDependencies": {
+      "concurrently": "^7.2.1",
+      "nodemon": "^2.0.16"
+    },
+    "scripts": {
+      "start": "node server/server",
+      "server": "nodemon server/server",
+      "client": "npm start --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\"",
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "author": "",
+    "license": "ISC"
+  }
